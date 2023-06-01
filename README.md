@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	</head>
-	<style>
-		h1 {color: #b05279;}
-		h2 {color: #b4d273;}
-		h3 {color: #6c99bb;}
-		span {color: #e87d3e;}
-</style>
-<body>
 <h1> BACS Similarity Experiment </h1>
 This experiment was created in order to check whether the BACS characters chosen for the bilingual affix experiment have a similar similarity matrix as a single set seen in the similarity checks performed in the <a href="https://doi.org/10.3758/s13428-016-0844-8">original BACS paper by Vidal, Content, & Chetail (2017)</a>. The selected characters are a mix of upper- and lowercase BACS1, chosen by excluding any very similar upper- and lowercase characters for each distinct Latin letter.
 
@@ -36,34 +25,34 @@ This section assembled the characters into pairs for the experiment. All 24 uppe
 
 The Fisher Yates shuffle is defined as a function (<span>FisherYatesShuffle</span>) to ensure an entirely randomised shuffle, which is then applied to the list of character pairs. This means that while every participant would see every combination, they would see them in a randomised order. This order is logged to the console.
 
-<h3> Experiment </h3>
-These are the screens using jsPsych displayed to the participants.
-<strong>Welcome screen </strong>
+<h3> Experiment </h3>    
+These are the screens using jsPsych displayed to the participants.    
+<strong>Welcome screen </strong>     
 A simple screen with the standard data storage information, and basic knowledge of the study.
 
-<strong> Consent screen </strong>
+<strong> Consent screen </strong>    
 A list of consent statements to be ticked by the participants. It is required to tick all of these to proceed to the experiment. The participant's selection of these items is stored in the final data output.
 
-<strong> Instructions screen </strong>
+<strong> Instructions screen </strong>    
 Brief instructions: informing the participant that they need to determine how similar two characters are on a 0-1 scale, with 0 being very dissimilar and 1 very similar.
 
-<strong> Example screen </strong>
+<strong> Example screen </strong>     
 Below is the example.png file, showing an example of a trial of the main experiment task:
-<img src='example.png' height='300px'>
+<img src='example.png' height='300px'>   
 This is shown to participants at this time.
 
-<strong> Dividing the stimuli into blocks </strong>
+<strong> Dividing the stimuli into blocks </strong>    
 The stimuli (character pairs) are split into 20 different blocks of 80 character pairs each. These are compiled into a <span>big_html</span> list containing, for each block separately, the HTML code needed to display the stimuli correctly at each trial. This is returned as a dictionary for each trial, containing the HTML and the two characters shown.
 
-<strong> Blocks </strong>
+<strong> Blocks </strong>     
 The 20 blocks of stimulus presentation are essentially identical. Block 1 begins by setting a counter for block number (<span>n</span>). The appropriate list item from <span>big_html</span> is selected, and saved as <span>block_stimuli</span>.
 
 The jsPsych modules follow. First, a single trial is defined as <span>similarity_trial</span>. This is set as a continuous slider going from 0 to 1, but coded as 0 to 100 out of necessity (jsPsych doesn't like working with decimals). Next, <span>similarity_procedure_block</span> sets the timeline for each trial, connecting <span>similarity_trial</span> with <span>block_stimuli</span>. This is followed by an inter-block screen, stating the number of blocks finished out of the total 20. It also suggests to participants to take a short break.
 
-<h3> Questionnaire </h3>
+<h3> Questionnaire </h3>     
 This asks demographic questions and a (very) bried language background. The original paper had 18-19 participants, and reported them only as have normal or normal-to-corrected vision, and being native French speakers.
 
 This questionnaire asks for age and sex of participants. The language sections asks participants the nature, proficiency, and age of acquisition of up to four languages. A final question asks whether they know any further languages.
 
-<h3> Goodbye </h3>
+<h3> Goodbye </h3>       
 Finally, a screen thanks participants for their time. The link with Pavlovia is closed.
