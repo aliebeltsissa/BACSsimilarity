@@ -55,6 +55,13 @@
 
     var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Y', 'Z', 'a', 'b', 'c', 'd', 'g', 'h', 'i', 'k', 'l', 'm', 'o', 'r', 't', 'u', 'v', 'y']; // BACS characters used in affix experiment
 
+    var character_pairs = []; // make a list with every possible character pairing
+    for (character of characters) {
+      for (let i = 0; i < characters.length; i++) {
+        character_pairs.push([character, characters[i]])
+      }
+    };
+
     function FisherYatesShuffle(array) { // list shuffling function
       var m = array.length, t, i;
       while (m) {
@@ -64,13 +71,6 @@
         array[i] = t;
       }
     return array;
-    };
-
-    var character_pairs = []; // make a list with every possible character pairing
-    for (character of characters) {
-      for (let i = 0; i < characters.length; i++) {
-        character_pairs.push([character, characters[i]])
-      }
     };
 
     var character_pairs_shuffled =  FisherYatesShuffle(character_pairs); // shuffle the list of character pairs
