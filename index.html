@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/plugin-html-slider-response.js"></script>
+    <script src="jspsych/plugin-preload.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-survey-html-form.js"></script>
+    <script src="jspsych/plugin-survey-multi-select.js"></script>
+    <script src="jspsych/plugin-fullscreen.js"></script>
+    <link rel="stylesheet" href="jspsych/jspsych.css">
+    <meta charset="utf-8"/>
+  </head>
+  <style>
+    @font-face {
+      font-family: "BACS";
+      src: url('BACS1.otf') format('opentype'); 
+    };
+  </style>
+  <body></body>
+  <script>
+    var jsPsych = initJsPsych({
+      show_progress_bar: true,
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+    
+    var timeline = [];
+
+    document.body.style.backgroundColor = "#808080"; // make background colour beige
+
+    function changeTextColor(color) {
+      var body = document.getElementsByTagName("body")[0];
+      body.style.color = color;
+    };
+
+    changeTextColor("white"); // make default text colour white
+
+    var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Y', 'Z', 'a', 'b', 'c', 'd', 'g', 'h', 'i', 'k', 'l', 'm', 'o', 'r', 't', 'u', 'v', 'y']; // BACS characters used in affix experiment
+
+    function FisherYatesShuffle(array) { // list shuffling function
+      var m = array.length, t, i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+    return array;
+    };
+
+    var character_pairs = [];
+    for (character of characters) {
+      for (let i = 0; i < characters.length; i++) {
+        character_pairs.push([character, characters[i]])
+      }
+    };
+
+    var character_pairs_shuffled =  FisherYatesShuffle(character_pairs);
+    console.log(character_pairs_shuffled);
+
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p style="font-size: 15px;">Welcome to the experiment. Before beginning, we ask that you read the consent information and confirm your agreement to participate in the experiment.</p><p style="font-size: 15px;">We ask that you remember that this is a research project and that your participation is entirely voluntary. You can stop your participation at any time, without needing to provide any explanation. The study we're asking you to participate in aims at examining your perception of different letters. You will be engaged in a session of XX minutes, followed by a brief questionnaire. You will have the opportunity to take a few breaks during the experiment. While this experiment looks at cognitive faculties, this experiment doesn't constitute clinical proof of eventual pathologies.</p><p style="font-size: 15px;">All of the information collected thanks to yours and others' participation will be held in a secure password-protected server, and will not be shared with anyone not authorised to view it. Your personal information will be kept with an arbitrary participant ID. Thanks to this data anonymity process, any researcher analysing the data won't be able to track the information back to a specific participant. Therefore, this process will make identifying you impossibile, even when results from the study will be published in scientific reviews, presented at congresses, or at any other public forum. More generally, the collected data will be treated in accordance with the laws on privacy and conformity to the Legislative Degree n. 196 "Code regarding the protection of personal data" of the 30th of June 2003.</p><p style="font-size: 15px;"> Before expressing your consent to participate, we would like to remind you again that in case you need explanations on any aspect of the experimental procedure, the researcher is at your disposition (aliebelt@sissa.it, davide.crepaldi@sissa.it).</p><p style="font-size: 15px;">Please press the spacebar to proceed to the consent form.</p>`,
+      choices: ' '
+    };
+    timeline.push(welcome);
+    
+    var consent = {
+      type: jsPsychSurveyHtmlForm,
+      preamble: '<p style="text-align:left;">I express my consent to participate in the study and further declare:</p>',
+      html: `<p style="text-align:left;"><input name="consent1" type="radio" id="YES1" value="YES1" required/><label for="YES1">to have carefully read the explanations relating to this study and to the entirety of the experimental procedure;</label></p><p style="text-align:left;"><input name="consent2" type="radio" id="YES2" value="YES2" required/><label for="YES2">to have been made aware of the goals and objectives of the study in question;</label></p><p style="text-align:left;"><input name="consent3" type="radio" id="YES3" value="YES3" required/><label for="YES3">to have had the possibility to ask questions regarding any aspect of the experimental procedure and to have received satisfactory answers;</label></p><p style="text-align:left;"><input name="consent4" type="radio" id="YES4" value="YES4" required/><label for="YES4">to be aware of any discomfort possibly caused by the experiment;</label></p><p style="text-align:left;"><input name="consent5" type="radio" id="YES5" value="YES5" required/><label for="YES5">to have received sufficient assurances on the confidentiality of information obtained from the following tests;</label></p><p style="text-align:left;"><input name="consent6" type="radio" id="YES6" value="YES6" required/><label for="YES6">to be aware that it's possible to stop participating at any phase of the study.</label></p>`
+    };
+    timeline.push(consent);
+
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p>Welcome, and thank you for your time!</p><p>In this experiment, you'll be asked to judge how similar two letters are to each other. You'll be asked to answer on a scale from 0 to 1 how similar they are, with <strong>0</strong> being <strong>very dissimilar</strong> and <strong>1</strong> being <strong>very similar</strong>. Please try to use the entire scale provided, not just the extremes.</p><p>Please press the spacebar to see an example.</p>`,
+      choices: ' '
+    };
+    timeline.push(instructions);
+
+    var example = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "<p>Here is an example of the characters you'll see:</p><img src='example.png' height='400px'><p>When you're ready to start, please press the spacebar.</p></div>",
+      choices: ' '
+    };
+    timeline.push(example);
+
+    // dividing the stimuli into blocks
+    var set1 = character_pairs_shuffled.slice(0,80);
+    var set2 = character_pairs_shuffled.slice(80,160);
+    var set3 = character_pairs_shuffled.slice(160,240);
+    var set4 = character_pairs_shuffled.slice(240,320);
+    var set5 = character_pairs_shuffled.slice(320,400);
+    var set6 = character_pairs_shuffled.slice(400,480);
+    var set7 = character_pairs_shuffled.slice(480,560);
+    var set8 = character_pairs_shuffled.slice(560,640);
+    var set9 = character_pairs_shuffled.slice(640,720);
+    var set10 = character_pairs_shuffled.slice(720,800);
+    var set11 = character_pairs_shuffled.slice(800,880);
+    var set12 = character_pairs_shuffled.slice(880,960);
+    var set13 = character_pairs_shuffled.slice(960,1040);
+    var set14 = character_pairs_shuffled.slice(1040,1120);
+    var set15 = character_pairs_shuffled.slice(1120,1200);
+    var set16 = character_pairs_shuffled.slice(1200,1280);
+    var set17 = character_pairs_shuffled.slice(1280,1360);
+    var set18 = character_pairs_shuffled.slice(1360,1440);
+    var set19 = character_pairs_shuffled.slice(1440,1520);
+    var set20 = character_pairs_shuffled.slice(1520,1600);
+
+    // BLOCK 1
+    var n = 1;
+    var big_html = [];
+    for (let m = 0; m < 20; m++) {
+      var trials_html_block = [];
+      if (m == 0) {var set = set1};
+      if (m == 1) {var set = set2};
+      if (m == 2) {var set = set3};
+      if (m == 3) {var set = set4};
+      if (m == 4) {var set = set5};
+      if (m == 5) {var set = set6};
+      if (m == 6) {var set = set7};
+      if (m == 7) {var set = set8};
+      if (m == 8) {var set = set9};
+      if (m == 9) {var set = set10};
+      if (m == 10) {var set = set11};
+      if (m == 11) {var set = set12};
+      if (m == 12) {var set = set13};
+      if (m == 13) {var set = set14};
+      if (m == 14) {var set = set15};
+      if (m == 15) {var set = set16};
+      if (m == 16) {var set = set17};
+      if (m == 17) {var set = set18};
+      if (m == 18) {var set = set19};
+      if (m == 19) {var set = set20};
+      for (let i = 0; i < 2; i++) {
+        var html = `<div style="width:500px;"><p style="font-size: 30px">How similar are these two characters?</p>
+          <div style="width:240px; float: left;">
+          <p style="font-size: 80px; font-family: BACS">`+ set[i][0] +`</p></div><div style="width:240px; float: right;">
+          <p style="font-size: 80px; font-family: BACS">`+ set[i][1] +`</p></div></div>`;
+        var pairs_html_dict = {html: html};
+        trials_html_block.push(pairs_html_dict)
+      };
+      big_html.push({
+        key: m,
+        value: trials_html_block
+      });
+    };
+
+    var block1_stimuli = big_html[0];
+    var block1_stimuli = Object.values(block1_stimuli);
+    var block1_stimuli = block1_stimuli[1];
+
+    var similarity_trial = {
+      type: jsPsychHtmlSliderResponse,
+      stimulus: jsPsych.timelineVariable('html'),
+      min: 0,
+      max: 100,
+      slider_start: 50,
+      require_movement: true,
+      labels: ['0', '1']
+    };
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block1_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    var inter_block = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: function () {
+        var html = `<p>You've finished set `+n+`/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>`;
+        n++;
+        return html},
+      choices: ' '
+    };
+    timeline.push(inter_block);
+
+    // BLOCK 2
+    var block2_stimuli = big_html[1];
+    var block2_stimuli = Object.values(block2_stimuli);
+    var block2_stimuli = block2_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block2_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 3
+    var block3_stimuli = big_html[2];
+    var block3_stimuli = Object.values(block3_stimuli);
+    var block3_stimuli = block3_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block3_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 4
+    var block4_stimuli = big_html[3];
+    var block4_stimuli = Object.values(block4_stimuli);
+    var block4_stimuli = block4_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block4_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 5
+    var block5_stimuli = big_html[4];
+    var block5_stimuli = Object.values(block5_stimuli);
+    var block5_stimuli = block5_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block5_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 6
+    var block6_stimuli = big_html[5];
+    var block6_stimuli = Object.values(block6_stimuli);
+    var block6_stimuli = block6_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block6_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 7
+    var block7_stimuli = big_html[6];
+    var block7_stimuli = Object.values(block7_stimuli);
+    var block7_stimuli = block7_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block7_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 8
+    var block8_stimuli = big_html[7];
+    var block8_stimuli = Object.values(block8_stimuli);
+    var block8_stimuli = block8_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block8_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 9
+    var block9_stimuli = big_html[8];
+    var block9_stimuli = Object.values(block9_stimuli);
+    var block9_stimuli = block9_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block9_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 10
+    var block10_stimuli = big_html[9];
+    var block10_stimuli = Object.values(block10_stimuli);
+    var block10_stimuli = block10_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block10_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 11
+    var block11_stimuli = big_html[10];
+    var block11_stimuli = Object.values(block11_stimuli);
+    var block11_stimuli = block11_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block11_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 12
+    var block12_stimuli = big_html[11];
+    var block12_stimuli = Object.values(block12_stimuli);
+    var block12_stimuli = block12_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block12_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 13
+    var block13_stimuli = big_html[12];
+    var block13_stimuli = Object.values(block13_stimuli);
+    var block13_stimuli = block13_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block13_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 14
+    var block14_stimuli = big_html[13];
+    var block14_stimuli = Object.values(block14_stimuli);
+    var block14_stimuli = block14_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block14_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 15
+    var block15_stimuli = big_html[14];
+    var block15_stimuli = Object.values(block15_stimuli);
+    var block15_stimuli = block15_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block15_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 16
+    var block16_stimuli = big_html[15];
+    var block16_stimuli = Object.values(block16_stimuli);
+    var block16_stimuli = block16_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block16_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 17
+    var block17_stimuli = big_html[16];
+    var block17_stimuli = Object.values(block17_stimuli);
+    var block17_stimuli = block17_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block17_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 18
+    var block18_stimuli = big_html[17];
+    var block18_stimuli = Object.values(block18_stimuli);
+    var block18_stimuli = block18_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block18_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 19
+    var block19_stimuli = big_html[18];
+    var block19_stimuli = Object.values(block19_stimuli);
+    var block19_stimuli = block19_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block19_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    timeline.push(inter_block);
+
+    // BLOCK 20
+    var block20_stimuli = big_html[19];
+    var block20_stimuli = Object.values(block20_stimuli);
+    var block20_stimuli = block20_stimuli[1];
+
+    var similarity_procedure_block = {
+      timeline: [similarity_trial],
+      timeline_variables: block20_stimuli
+    };
+    timeline.push(similarity_procedure_block);
+
+    var post_block = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p>You've finished all of the character sets! Please press the spacebar to answer a few questions.</p>`,
+      choices: ' '
+    };
+    timeline.push(post_block);
+
+    jsPsych.run(timeline);
+  </script>
+</html>
