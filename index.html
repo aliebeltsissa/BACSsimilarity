@@ -162,7 +162,7 @@
           <div style="width:240px; float: left;">
           <p style="font-size: 80px; font-family: BACS">`+ set[i][0] +`</p></div><div style="width:240px; float: right;">
           <p style="font-size: 80px; font-family: BACS">`+ set[i][1] +`</p></div></div>`;
-        var pairs_html_dict = {html: html};
+        var pairs_html_dict = {html: html, chara1: set[i][0], chara2: set[i][1]};
         trials_html_block.push(pairs_html_dict)
       };
       big_html.push({
@@ -184,7 +184,11 @@
       max: 100,
       slider_start: 50,
       require_movement: true,
-      labels: ['0', '1']
+      labels: ['0', '1'],
+      data: {
+        character1: jsPsych.timelineVariable('chara1'),
+        character2: jsPsych.timelineVariable('chara2')
+      }
     };
 
     var similarity_procedure_block1 = { // sets timeline for each trial, pulling the html as the timeline variables
