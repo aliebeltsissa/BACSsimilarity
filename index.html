@@ -171,6 +171,8 @@
       });
     };
 
+    jsPsych.data.get().ignore('slider_start'); // don't have a column with the value of the start of the slider
+
     // BLOCK 1
     var n = 1; // counter for the number of blocks
     var block1_stimuli = big_html[0]; // selects html using stimuli for this block
