@@ -157,7 +157,7 @@
       if (m == 17) {var set = set18};
       if (m == 18) {var set = set19};
       if (m == 19) {var set = set20};
-      for (let i = 0; i < set.length; i++) {
+      for (let i = 0; i < set.length; i++) { // for testing of the structure, can change set.length to 2
         var html = `<div style="width:500px;"><p style="font-size: 30px">How similar are these two characters?</p>
           <div style="width:240px; float: left;">
           <p style="font-size: 80px; font-family: BACS">`+ set[i][0] +`</p></div><div style="width:240px; float: right;">
@@ -187,11 +187,11 @@
       labels: ['0', '1']
     };
 
-    var similarity_procedure_block = { // sets timeline for each trial, pulling the html as the timeline variables
+    var similarity_procedure_block1 = { // sets timeline for each trial, pulling the html as the timeline variables
       timeline: [similarity_trial],
       timeline_variables: block1_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block1);
 
     // inter-block screen for a break & reporting on how many blocks done
     var inter_block = {
@@ -209,11 +209,11 @@
     var block2_stimuli = Object.values(block2_stimuli);
     var block2_stimuli = block2_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block2 = {
       timeline: [similarity_trial],
       timeline_variables: block2_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block2);
 
     timeline.push(inter_block);
 
@@ -222,11 +222,11 @@
     var block3_stimuli = Object.values(block3_stimuli);
     var block3_stimuli = block3_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block3 = {
       timeline: [similarity_trial],
       timeline_variables: block3_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block3);
 
     timeline.push(inter_block);
 
@@ -235,11 +235,11 @@
     var block4_stimuli = Object.values(block4_stimuli);
     var block4_stimuli = block4_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block4 = {
       timeline: [similarity_trial],
       timeline_variables: block4_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block4);
 
     timeline.push(inter_block);
 
@@ -248,11 +248,11 @@
     var block5_stimuli = Object.values(block5_stimuli);
     var block5_stimuli = block5_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block5 = {
       timeline: [similarity_trial],
       timeline_variables: block5_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block5);
 
     timeline.push(inter_block);
 
@@ -261,11 +261,11 @@
     var block6_stimuli = Object.values(block6_stimuli);
     var block6_stimuli = block6_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block6 = {
       timeline: [similarity_trial],
       timeline_variables: block6_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block6);
 
     timeline.push(inter_block);
 
@@ -274,11 +274,11 @@
     var block7_stimuli = Object.values(block7_stimuli);
     var block7_stimuli = block7_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block7 = {
       timeline: [similarity_trial],
       timeline_variables: block7_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block7);
 
     timeline.push(inter_block);
 
@@ -287,11 +287,11 @@
     var block8_stimuli = Object.values(block8_stimuli);
     var block8_stimuli = block8_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block8 = {
       timeline: [similarity_trial],
       timeline_variables: block8_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block8);
 
     timeline.push(inter_block);
 
@@ -300,11 +300,11 @@
     var block9_stimuli = Object.values(block9_stimuli);
     var block9_stimuli = block9_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block9 = {
       timeline: [similarity_trial],
       timeline_variables: block9_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block9);
 
     timeline.push(inter_block);
 
@@ -313,11 +313,11 @@
     var block10_stimuli = Object.values(block10_stimuli);
     var block10_stimuli = block10_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block10 = {
       timeline: [similarity_trial],
       timeline_variables: block10_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block10);
 
     timeline.push(inter_block);
 
@@ -326,11 +326,11 @@
     var block11_stimuli = Object.values(block11_stimuli);
     var block11_stimuli = block11_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block11 = {
       timeline: [similarity_trial],
       timeline_variables: block11_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block11);
 
     timeline.push(inter_block);
 
@@ -339,11 +339,11 @@
     var block12_stimuli = Object.values(block12_stimuli);
     var block12_stimuli = block12_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block12 = {
       timeline: [similarity_trial],
       timeline_variables: block12_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block12);
 
     timeline.push(inter_block);
 
@@ -352,11 +352,11 @@
     var block13_stimuli = Object.values(block13_stimuli);
     var block13_stimuli = block13_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block13 = {
       timeline: [similarity_trial],
       timeline_variables: block13_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block13);
 
     timeline.push(inter_block);
 
@@ -365,11 +365,11 @@
     var block14_stimuli = Object.values(block14_stimuli);
     var block14_stimuli = block14_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block14 = {
       timeline: [similarity_trial],
       timeline_variables: block14_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block14);
 
     timeline.push(inter_block);
 
@@ -378,11 +378,11 @@
     var block15_stimuli = Object.values(block15_stimuli);
     var block15_stimuli = block15_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block15 = {
       timeline: [similarity_trial],
       timeline_variables: block15_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block15);
 
     timeline.push(inter_block);
 
@@ -391,11 +391,11 @@
     var block16_stimuli = Object.values(block16_stimuli);
     var block16_stimuli = block16_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block16 = {
       timeline: [similarity_trial],
       timeline_variables: block16_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block16);
 
     timeline.push(inter_block);
 
@@ -404,11 +404,11 @@
     var block17_stimuli = Object.values(block17_stimuli);
     var block17_stimuli = block17_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block17 = {
       timeline: [similarity_trial],
       timeline_variables: block17_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block17);
 
     timeline.push(inter_block);
 
@@ -417,11 +417,11 @@
     var block18_stimuli = Object.values(block18_stimuli);
     var block18_stimuli = block18_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block18 = {
       timeline: [similarity_trial],
       timeline_variables: block18_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block18);
 
     timeline.push(inter_block);
 
@@ -430,11 +430,11 @@
     var block19_stimuli = Object.values(block19_stimuli);
     var block19_stimuli = block19_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block19 = {
       timeline: [similarity_trial],
       timeline_variables: block19_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block19);
 
     timeline.push(inter_block);
 
@@ -443,11 +443,11 @@
     var block20_stimuli = Object.values(block20_stimuli);
     var block20_stimuli = block20_stimuli[1];
 
-    var similarity_procedure_block = {
+    var similarity_procedure_block20 = {
       timeline: [similarity_trial],
       timeline_variables: block20_stimuli
     };
-    timeline.push(similarity_procedure_block);
+    timeline.push(similarity_procedure_block20);
 
     var post_block = {
       type: jsPsychHtmlKeyboardResponse,
