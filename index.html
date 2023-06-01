@@ -50,6 +50,8 @@
 
     changeTextColor("white"); // make default text colour white
 
+    jsPsych.data.ignore('slider_start'); // don't have a column with the value of the start of the slider
+
 
     /* ========== STIMULI GENERATION ========== */
 
@@ -170,8 +172,6 @@
         value: trials_html_block
       });
     };
-
-    jsPsych.data.get().ignore('slider_start'); // don't have a column with the value of the start of the slider
 
     // BLOCK 1
     var n = 1; // counter for the number of blocks
