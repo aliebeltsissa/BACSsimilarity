@@ -1,0 +1,188 @@
+"trial_type","trial_index","time_elapsed","internal_node_id","rt","stimulus","response","slider_start","character1","character2","name"
+"pavlovia","0","435","0.0-0.0","","","","","","",""
+"html-keyboard-response","1","1287","0.0-1.0","851","<p style=""font-size: 15px;"">Welcome to the experiment. Before beginning, we ask that you read the consent information and confirm your agreement to participate in the experiment.</p><p style=""font-size: 15px;"">We ask that you remember that this is a research project and that your participation is entirely voluntary. You can stop your participation at any time, without needing to provide any explanation. The study we're asking you to participate in aims at examining your perception of different letters. You will be engaged in a session of XX minutes, followed by a brief questionnaire. You will have the opportunity to take a few breaks during the experiment. While this experiment looks at cognitive faculties, this experiment doesn't constitute clinical proof of eventual pathologies.</p><p style=""font-size: 15px;"">All of the information collected thanks to yours and others' participation will be held in a secure password-protected server, and will not be shared with anyone not authorised to view it. Your personal information will be kept with an arbitrary participant ID. Thanks to this data anonymity process, any researcher analysing the data won't be able to track the information back to a specific participant. Therefore, this process will make identifying you impossibile, even when results from the study will be published in scientific reviews, presented at congresses, or at any other public forum. More generally, the collected data will be treated in accordance with the laws on privacy and conformity to the Legislative Degree n. 196 ""Code regarding the protection of personal data"" of the 30th of June 2003.</p><p style=""font-size: 15px;""> Before expressing your consent to participate, we would like to remind you again that in case you need explanations on any aspect of the experimental procedure, the researcher is at your disposition (aliebelt@sissa.it, davide.crepaldi@sissa.it).</p><p style=""font-size: 15px;"">Please press the spacebar to proceed to the consent form.</p>"," ","","","",""
+"survey-html-form","2","7679","0.0-2.0","6390","","{""consent1"":""YES1"",""consent2"":""YES2"",""consent3"":""YES3"",""consent4"":""YES4"",""consent5"":""YES5"",""consent6"":""YES6""}","","","",""
+"html-keyboard-response","3","8356","0.0-3.0","676","<p>Welcome, and thank you for your time!</p><p>In this experiment, you'll be asked to judge how similar two letters are to each other. You'll be asked to answer on a scale from 0 to 1 how similar they are, with <strong>0</strong> being <strong>very dissimilar</strong> and <strong>1</strong> being <strong>very similar</strong>. Please try to use the entire scale provided, not just the extremes.</p><p>Please press the spacebar to see an example.</p>"," ","","","",""
+"html-keyboard-response","4","8925","0.0-4.0","568","<p>Here is an example of the characters you'll see:</p><img src='example.png' height='400px'><p>When you're ready to start, please press the spacebar.</p></div>"," ","","","",""
+"html-slider-response","5","12867","0.0-5.0-0.0","3939","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">C</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">Y</p></div></div>","62","50","C","Y",""
+"html-slider-response","6","16248","0.0-5.0-0.1","3377","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">v</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">h</p></div></div>","60","50","v","h",""
+"html-keyboard-response","7","16953","0.0-6.0","704","<p>You've finished set 1/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","8","18769","0.0-7.0-0.0","1809","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">b</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">v</p></div></div>","30","50","b","v",""
+"html-slider-response","9","20632","0.0-7.0-0.1","1860","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">v</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">m</p></div></div>","56","50","v","m",""
+"html-keyboard-response","10","21283","0.0-8.0","649","<p>You've finished set 2/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","11","23633","0.0-9.0-0.0","2348","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">A</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">T</p></div></div>","37","50","A","T",""
+"html-slider-response","12","25754","0.0-9.0-0.1","2118","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">S</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">r</p></div></div>","40","50","S","r",""
+"html-keyboard-response","13","26363","0.0-10.0","608","<p>You've finished set 3/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","14","28387","0.0-11.0-0.0","2022","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">U</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">i</p></div></div>","56","50","U","i",""
+"html-slider-response","15","31154","0.0-11.0-0.1","2764","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">k</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">c</p></div></div>","60","50","k","c",""
+"html-keyboard-response","16","32266","0.0-12.0","1110","<p>You've finished set 4/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","17","34720","0.0-13.0-0.0","2451","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">R</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">L</p></div></div>","39","50","R","L",""
+"html-slider-response","18","37151","0.0-13.0-0.1","2429","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">Q</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">Y</p></div></div>","77","50","Q","Y",""
+"html-keyboard-response","19","37452","0.0-14.0","299","<p>You've finished set 5/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","20","39586","0.0-15.0-0.0","2133","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">J</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">h</p></div></div>","63","50","J","h",""
+"html-slider-response","21","41364","0.0-15.0-0.1","1775","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">L</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">F</p></div></div>","64","50","L","F",""
+"html-keyboard-response","22","41903","0.0-16.0","537","<p>You've finished set 6/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","23","44427","0.0-17.0-0.0","2521","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">O</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">U</p></div></div>","46","50","O","U",""
+"html-slider-response","24","46153","0.0-17.0-0.1","1723","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">Q</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">H</p></div></div>","57","50","Q","H",""
+"html-keyboard-response","25","46698","0.0-18.0","544","<p>You've finished set 7/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","26","48464","0.0-19.0-0.0","1763","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">a</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">U</p></div></div>","55","50","a","U",""
+"html-slider-response","27","50380","0.0-19.0-0.1","1914","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">d</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">a</p></div></div>","37","50","d","a",""
+"html-keyboard-response","28","50650","0.0-20.0","268","<p>You've finished set 8/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","29","52657","0.0-21.0-0.0","2005","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">I</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">l</p></div></div>","59","50","I","l",""
+"html-slider-response","30","54422","0.0-21.0-0.1","1764","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">I</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">G</p></div></div>","55","50","I","G",""
+"html-keyboard-response","31","54859","0.0-22.0","435","<p>You've finished set 9/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","32","57041","0.0-23.0-0.0","2178","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">L</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">a</p></div></div>","90","50","L","a",""
+"html-slider-response","33","58851","0.0-23.0-0.1","1808","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">A</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">C</p></div></div>","66","50","A","C",""
+"html-keyboard-response","34","59351","0.0-24.0","498","<p>You've finished set 10/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","35","62501","0.0-25.0-0.0","3148","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">I</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">K</p></div></div>","37","50","I","K",""
+"html-slider-response","36","64739","0.0-25.0-0.1","2236","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">o</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">E</p></div></div>","64","50","o","E",""
+"html-keyboard-response","37","65238","0.0-26.0","497","<p>You've finished set 11/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","38","67239","0.0-27.0-0.0","1999","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">u</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">t</p></div></div>","61","50","u","t",""
+"html-slider-response","39","68814","0.0-27.0-0.1","1571","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">r</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">Y</p></div></div>","33","50","r","Y",""
+"html-keyboard-response","40","69311","0.0-28.0","496","<p>You've finished set 12/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","41","71362","0.0-29.0-0.0","2050","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">P</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">d</p></div></div>","63","50","P","d",""
+"html-slider-response","42","74448","0.0-29.0-0.1","3083","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">i</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">a</p></div></div>","62","50","i","a",""
+"html-keyboard-response","43","74900","0.0-30.0","451","<p>You've finished set 13/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","44","76823","0.0-31.0-0.0","1920","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">B</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">L</p></div></div>","72","50","B","L",""
+"html-slider-response","45","81586","0.0-31.0-0.1","4761","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">K</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">K</p></div></div>","100","50","K","K",""
+"html-keyboard-response","46","82187","0.0-32.0","600","<p>You've finished set 14/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","47","85167","0.0-33.0-0.0","2978","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">C</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">m</p></div></div>","63","50","C","m",""
+"html-slider-response","48","87107","0.0-33.0-0.1","1937","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">R</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">K</p></div></div>","36","50","R","K",""
+"html-keyboard-response","49","87614","0.0-34.0","506","<p>You've finished set 15/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","50","91053","0.0-35.0-0.0","3437","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">F</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">Z</p></div></div>","90","50","F","Z",""
+"html-slider-response","51","93178","0.0-35.0-0.1","2122","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">d</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">T</p></div></div>","32","50","d","T",""
+"html-keyboard-response","52","93791","0.0-36.0","612","<p>You've finished set 16/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","53","96674","0.0-37.0-0.0","2880","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">b</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">D</p></div></div>","67","50","b","D",""
+"html-slider-response","54","99287","0.0-37.0-0.1","2611","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">U</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">Y</p></div></div>","59","50","U","Y",""
+"html-keyboard-response","55","100330","0.0-38.0","1041","<p>You've finished set 17/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","56","102613","0.0-39.0-0.0","2282","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">a</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">J</p></div></div>","70","50","a","J",""
+"html-slider-response","57","105916","0.0-39.0-0.1","3300","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">A</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">b</p></div></div>","5","50","A","b",""
+"html-keyboard-response","58","106479","0.0-40.0","562","<p>You've finished set 18/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","59","109440","0.0-41.0-0.0","2960","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">T</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">b</p></div></div>","59","50","T","b",""
+"html-slider-response","60","111036","0.0-41.0-0.1","1591","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">F</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">t</p></div></div>","33","50","F","t",""
+"html-keyboard-response","61","111624","0.0-42.0","587","<p>You've finished set 19/20 of characters! You may take a short break, and press the spacebar when you're ready to continue.</p>"," ","","","",""
+"html-slider-response","62","114199","0.0-43.0-0.0","2573","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">G</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">G</p></div></div>","100","50","G","G",""
+"html-slider-response","63","116732","0.0-43.0-0.1","2531","<div style=""width:500px;""><p style=""font-size: 30px"">How similar are these two characters?</p>
+          <div style=""width:240px; float: left;"">
+          <p style=""font-size: 80px; font-family: BACS"">M</p></div><div style=""width:240px; float: right;"">
+          <p style=""font-size: 80px; font-family: BACS"">c</p></div></div>","68","50","M","c",""
+"html-keyboard-response","64","117027","0.0-44.0","293","<p>You've finished all of the character sets! Please press the spacebar to answer a few questions.</p>"," ","","","",""
+"survey-html-form","65","151574","0.0-45.0","34542","","{""Age"":""23"",""Sex"":""Female"",""L1"":""English"",""L1AoA"":""0"",""L1Prof"":""6"",""L2"":""French"",""L2AoA"":""0"",""L2Prof"":""5"",""L3"":""Italian"",""L3AoA"":""22"",""L3Prof"":""2"",""L4"":""German"",""L4AoA"":""13"",""L4Prof"":""3"",""otherLs"":""No""}","","","","bio_info"
+"html-keyboard-response","66","152629","0.0-46.0","1053","<p>Thank you for your participation! Please press the spacebar to finish.</p>"," ","","","",""
