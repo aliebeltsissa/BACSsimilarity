@@ -31,6 +31,13 @@
     
     var timeline = [];
 
+    /* init connection with pavlovia.org */
+    var pavlovia_init = {
+      type: "pavlovia",
+      command: "init"
+    };
+    timeline.push(pavlovia_init);
+
     document.body.style.backgroundColor = "#808080"; // make background colour beige
 
     function changeTextColor(color) {
@@ -433,6 +440,13 @@
       choices: ' '
     };
     timeline.push(post_block);
+
+    /* finish connection with pavlovia.org */
+    var pavlovia_finish = {
+      type: "pavlovia",
+      command: "finish"
+      };
+    timeline.push(pavlovia_finish);
 
     jsPsych.run(timeline);
   </script>
