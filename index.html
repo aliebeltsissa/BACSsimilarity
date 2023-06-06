@@ -116,6 +116,12 @@
     };
     timeline.push(instructions);
 
+    // show whole character set
+    var study_characters = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p></p>`
+    };
+
     // example of the experiment (uses BACS characters unused in the experiment)
     var example = {
       type: jsPsychHtmlKeyboardResponse,
