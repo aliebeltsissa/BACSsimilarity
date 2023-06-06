@@ -74,7 +74,8 @@
     return array;
     };
 
-    var character_pairs_shuffled =  FisherYatesShuffle(character_pairs); // shuffle the list of character pairs
+    var firsthalf_pairs = character_pairs.slice(0,800); // select first half of pairs
+    var character_pairs_shuffled =  FisherYatesShuffle(firsthalf_pairs); // shuffle the list of character pairs
     console.log(character_pairs_shuffled);
 
 
@@ -135,16 +136,6 @@
     var set8 = character_pairs_shuffled.slice(560,640);
     var set9 = character_pairs_shuffled.slice(640,720);
     var set10 = character_pairs_shuffled.slice(720,800);
-    var set11 = character_pairs_shuffled.slice(800,880);
-    var set12 = character_pairs_shuffled.slice(880,960);
-    var set13 = character_pairs_shuffled.slice(960,1040);
-    var set14 = character_pairs_shuffled.slice(1040,1120);
-    var set15 = character_pairs_shuffled.slice(1120,1200);
-    var set16 = character_pairs_shuffled.slice(1200,1280);
-    var set17 = character_pairs_shuffled.slice(1280,1360);
-    var set18 = character_pairs_shuffled.slice(1360,1440);
-    var set19 = character_pairs_shuffled.slice(1440,1520);
-    var set20 = character_pairs_shuffled.slice(1520,1600);
 
     // creates a list with the relevant html code for each block
     var big_html = [];
@@ -160,21 +151,11 @@
       if (m == 7) {var set = set8};
       if (m == 8) {var set = set9};
       if (m == 9) {var set = set10};
-      if (m == 10) {var set = set11};
-      if (m == 11) {var set = set12};
-      if (m == 12) {var set = set13};
-      if (m == 13) {var set = set14};
-      if (m == 14) {var set = set15};
-      if (m == 15) {var set = set16};
-      if (m == 16) {var set = set17};
-      if (m == 17) {var set = set18};
-      if (m == 18) {var set = set19};
-      if (m == 19) {var set = set20};
       for (let i = 0; i < 2; i++) { // for testing of the structure, can change set.length to 2
         var html = `<div style="width:500px;"><p style="font-size: 30px">How similar are these two characters?</p>
           <div style="width:240px; float: left;">
           <p style="font-size: 80px; font-family: BACS">`+ set[i][0] +`</p></div><div style="width:240px; float: right;">
-          <p style="font-size: 80px; font-family: BACS">`+ set[i][1] +`</p></div></div>`;
+          <p style="font-size: 80px; font-family: BACS">`+ set[i][1] +`</p><p style="font-size : 20px;">Instead of dragging the slider, you can click any point on the slider to make your selection.</p></div></div>`;
         var pairs_html_dict = {html: html, chara1: set[i][0], chara2: set[i][1]};
         trials_html_block.push(pairs_html_dict)
       };
@@ -337,134 +318,6 @@
     timeline.push(similarity_procedure_block10);
 
     timeline.push(inter_block);
-
-    // BLOCK 11
-    var block11_stimuli = big_html[10];
-    var block11_stimuli = Object.values(block11_stimuli);
-    var block11_stimuli = block11_stimuli[1];
-
-    var similarity_procedure_block11 = {
-      timeline: [similarity_trial],
-      timeline_variables: block11_stimuli
-    };
-    timeline.push(similarity_procedure_block11);
-
-    timeline.push(inter_block);
-
-    // BLOCK 12
-    var block12_stimuli = big_html[11];
-    var block12_stimuli = Object.values(block12_stimuli);
-    var block12_stimuli = block12_stimuli[1];
-
-    var similarity_procedure_block12 = {
-      timeline: [similarity_trial],
-      timeline_variables: block12_stimuli
-    };
-    timeline.push(similarity_procedure_block12);
-
-    timeline.push(inter_block);
-
-    // BLOCK 13
-    var block13_stimuli = big_html[12];
-    var block13_stimuli = Object.values(block13_stimuli);
-    var block13_stimuli = block13_stimuli[1];
-
-    var similarity_procedure_block13 = {
-      timeline: [similarity_trial],
-      timeline_variables: block13_stimuli
-    };
-    timeline.push(similarity_procedure_block13);
-
-    timeline.push(inter_block);
-
-    // BLOCK 14
-    var block14_stimuli = big_html[13];
-    var block14_stimuli = Object.values(block14_stimuli);
-    var block14_stimuli = block14_stimuli[1];
-
-    var similarity_procedure_block14 = {
-      timeline: [similarity_trial],
-      timeline_variables: block14_stimuli
-    };
-    timeline.push(similarity_procedure_block14);
-
-    timeline.push(inter_block);
-
-    // BLOCK 15
-    var block15_stimuli = big_html[14];
-    var block15_stimuli = Object.values(block15_stimuli);
-    var block15_stimuli = block15_stimuli[1];
-
-    var similarity_procedure_block15 = {
-      timeline: [similarity_trial],
-      timeline_variables: block15_stimuli
-    };
-    timeline.push(similarity_procedure_block15);
-
-    timeline.push(inter_block);
-
-    // BLOCK 16
-    var block16_stimuli = big_html[15];
-    var block16_stimuli = Object.values(block16_stimuli);
-    var block16_stimuli = block16_stimuli[1];
-
-    var similarity_procedure_block16 = {
-      timeline: [similarity_trial],
-      timeline_variables: block16_stimuli
-    };
-    timeline.push(similarity_procedure_block16);
-
-    timeline.push(inter_block);
-
-    // BLOCK 17
-    var block17_stimuli = big_html[16];
-    var block17_stimuli = Object.values(block17_stimuli);
-    var block17_stimuli = block17_stimuli[1];
-
-    var similarity_procedure_block17 = {
-      timeline: [similarity_trial],
-      timeline_variables: block17_stimuli
-    };
-    timeline.push(similarity_procedure_block17);
-
-    timeline.push(inter_block);
-
-    // BLOCK 18
-    var block18_stimuli = big_html[17];
-    var block18_stimuli = Object.values(block18_stimuli);
-    var block18_stimuli = block18_stimuli[1];
-
-    var similarity_procedure_block18 = {
-      timeline: [similarity_trial],
-      timeline_variables: block18_stimuli
-    };
-    timeline.push(similarity_procedure_block18);
-
-    timeline.push(inter_block);
-
-    // BLOCK 19
-    var block19_stimuli = big_html[18];
-    var block19_stimuli = Object.values(block19_stimuli);
-    var block19_stimuli = block19_stimuli[1];
-
-    var similarity_procedure_block19 = {
-      timeline: [similarity_trial],
-      timeline_variables: block19_stimuli
-    };
-    timeline.push(similarity_procedure_block19);
-
-    timeline.push(inter_block);
-
-    // BLOCK 20
-    var block20_stimuli = big_html[19];
-    var block20_stimuli = Object.values(block20_stimuli);
-    var block20_stimuli = block20_stimuli[1];
-
-    var similarity_procedure_block20 = {
-      timeline: [similarity_trial],
-      timeline_variables: block20_stimuli
-    };
-    timeline.push(similarity_procedure_block20);
 
     var post_block = {
       type: jsPsychHtmlKeyboardResponse,
