@@ -80,6 +80,13 @@
 
 
     /* ========== EXPERIMENT ========== */
+    // Participant ID textbox
+    var sbjIDPrompt = {
+      type: jsPsychSurveyHtmlForm,
+      preamble: '<p>Please enter your Prolific ID:</b></p>',
+      html: '<input name="ID" type="text" required/></p>',
+    };
+    timeline.push(sbjIDPrompt);
 
     // welcome screen for the experiment
     var welcome = {
