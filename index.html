@@ -2,17 +2,21 @@
 <html>
   <head>
     <title>BACS Similarity Experiment</title>
-    <!-- Importing jsPsych & plugins -->
+    <!-- jsPsych & Pavlovia -->
     <script src="lib/vendors/jspsych-7.1.2/jspsych.js"></script>
+    <script type="text/javascript" src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
+    <!-- preload & setup -->
+    <script src="lib/vendors/jspsych-7.1.2/plugin-preload.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-fullscreen.js"></script>
+    <!-- response plugins -->
     <script src="lib/vendors/jspsych-7.1.2/plugin-html-keyboard-response.js"></script>
     <script src="lib/vendors/jspsych-7.1.2/plugin-image-keyboard-response.js"></script>
-    <script src="lib/vendors/jspsych-7.1.2/plugin-preload.js"></script>
-    <script type="text/javascript" src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-html-slider-response.js"></script>
+    <!-- survey plugins -->
     <script src="lib/vendors/jspsych-7.1.2/plugin-html-button-response.js"></script>
     <script src="lib/vendors/jspsych-7.1.2/plugin-survey-html-form.js"></script>
     <script src="lib/vendors/jspsych-7.1.2/plugin-survey-multi-select.js"></script>
-    <script src="lib/vendors/jspsych-7.1.2/plugin-html-slider-response.js"></script>
-    <script src="lib/vendors/jspsych-7.1.2/plugin-fullscreen.js"></script>
+    <!-- formatting & styling -->
     <script type="text/javascript" src="lib/vendors/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="lib/vendors/jspsych-7.1.2/jspsych.css">
     <meta charset="utf-8"/>
@@ -25,32 +29,36 @@
   </style>
   <body></body>
   <script>
-    /* ========== INITIATION ========== */
+    /* ========== INITIALISATION ========== */
     var jsPsych = initJsPsych({
       show_progress_bar: true,
       on_finish: function() {
-        jsPsych.data.displayData();
-      }
+        jsPsych.data.displayData(); // when all trials finished, display data -- can probably remove this for actually running
+      };
+      function() {
+        window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX"
+      } // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
+    });
+
+    // capture info from Prolific
+    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+    jsPsych.data.addProperties({
+      subject_id: subject_id,
+      study_id: study_id,
+      session_id: session_id
     });
     
-    var timeline = [];
-
-    /* init connection with pavlovia.org */
+    /* open connection with Pavlovia */
     var pavlovia_init = {
       type: jsPsychPavlovia,
       command: "init"
     };
     timeline.push(pavlovia_init);
-
-    document.body.style.backgroundColor = "#808080"; // make background colour beige
-
-    function changeTextColor(color) {
-      var body = document.getElementsByTagName("body")[0];
-      body.style.color = color;
-    };
-
-    changeTextColor("white"); // make default text colour white
-
+    
+    var timeline = [];
 
     /* ========== STIMULI GENERATION ========== */
 
@@ -80,6 +88,15 @@
 
 
     /* ========== EXPERIMENT ========== */
+    document.body.style.backgroundColor = "#808080"; // make background colour beige
+
+    function changeTextColor(color) {
+      var body = document.getElementsByTagName("body")[0];
+      body.style.color = color;
+    };
+
+    changeTextColor("white"); // make default text colour white
+
     // Participant ID textbox
     var sbjIDPrompt = {
       type: jsPsychSurveyHtmlForm,
