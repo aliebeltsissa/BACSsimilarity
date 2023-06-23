@@ -32,6 +32,7 @@
   <script>
     /* ========== INITIALISATION ========== */
     var jsPsych = initJsPsych({
+      show_progress_bar: true,
       on_finish: function() {
         jsPsych.data.displayData(); // when all trials finished, display data -- can probably remove this for actually running
         window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
@@ -107,8 +108,8 @@
     // welcome screen for the experiment
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
-      stimulus: `<p style="font-size: 15px;">Welcome to the experiment. Before beginning, we ask that you read the consent information and confirm your agreement to participate in the experiment.</p>
-      <p style="font-size: 15px;">We ask that you remember that this is a research project and that your participation is entirely voluntary. You can stop your participation at any time, without needing to provide any explanation. The study we're asking you to participate in aims at examining your perception of different letters. You will be engaged in a session of approximately 75 minutes, followed by a brief questionnaire. You will have the opportunity to take a few breaks during the experiment. You will be paid £10 for your participation, corresponding to a rate of £8/hour. While this experiment looks at cognitive faculties, this experiment doesn't constitute clinical proof of eventual pathologies.</p>
+      stimulus: `<pstyle="font-size: 15px;">Welcome to the experiment. Before beginning, we ask that you read the consent information and confirm your agreement to participate in the experiment.</p>
+      <p style="font-size: 15px;">We ask that you remember that this is a research project and that your participation is entirely voluntary. You can stop your participation at any time, without needing to provide any explanation. The study we're asking you to participate in aims at examining your perception of different letters. You will be engaged in a session of approximately 50 minutes, followed by a brief questionnaire. You will have the opportunity to take a few breaks during the experiment. You will be paid £6.67 for your participation, corresponding to a rate of £8/hour. While this experiment looks at cognitive faculties, this experiment doesn't constitute clinical proof of eventual pathologies.</p>
       <p style="font-size: 15px;">All of the information collected thanks to yours and others' participation will be held in a secure password-protected server, and will not be shared with anyone not authorised to view it. Your personal information will be kept with an arbitrary participant ID. Thanks to this data anonymity process, any researcher analysing the data won't be able to track the information back to a specific participant. Therefore, this process will make identifying you impossibile, even when results from the study will be published in scientific reviews, presented at congresses, or at any other public forum. More generally, the collected data will be treated in accordance with the laws on privacy and conformity to the Legislative Degree n. 196 "Code regarding the protection of personal data" of the 30th of June 2003 and to the European Regulation 2016/670  (General Data Protection Regulation - GDPR).</p>
       <p style="font-size: 15px;"> Before expressing your consent to participate, we would like to remind you again that in case you need explanations on any aspect of the experimental procedure, the researcher is at your disposition (<a href="mailto:aliebelt@sissa.it">aliebelt@sissa.it</a>, <a href="mailto:davide.crepaldi@sissa.it">davide.crepaldi@sissa.it</a>).</p>
       <p style="font-size: 15px;">If you wish to download the above informed consent form, please click here: <a href="BACS1SE_Informed-Consent.pdf" download>informed consent form</a>. Please press the spacebar to proceed to the consent form.</p>`,
@@ -367,10 +368,45 @@
       preamble: '<p style="font-size: 25px; color: black">LANGUAGE INFORMATION</b></p>',
       html: `<legend>Age</legend><div><input name="Age" type="text" required/></p>
       <p><legend>Sex</legend><input name="Sex" type="radio" id="Female" name="Sex" value="Female" required/><label for="Female">Female</label><input type="radio" id="Male" name="Sex" value="Male"><label for="Male">Male</label><input type="radio" id="Other" name="Sex" value="Other"><label for="Other">Other/do not want to respond</label></p>
-      <p style="color: #eb9c9a"><legend>What language would you consider as your <strong>FIRST LANGUAGE</strong>? (The language in which you feel most comfortable).</legend><input name="L1" type="text" required/></p><legend>At what age did you start learning this language?</legend><input name="L1AoA" type="text" required/></p><p><legend>How well can you speak this language?</legend><input name="L1Prof" type="radio" id="0" name="L1Prof" value="0" required/><label for="0">0</label><input name="L1Prof" type="radio" id="1" name="L1Prof" value="1" required/><label for="1">1</label><input name="L1Prof" type="radio" id="2" name="L1Prof" value="2" required/><label for="2">2</label><input name="L1Prof" type="radio" id="3" name="L1Prof" value="3" required/><label for="3">3</label><input name="L1Prof" type="radio" id="4" name="L1Prof" value="4" required/><label for="4">4</label><input name="L1Prof" type="radio" id="5" name="L1Prof" value="5" required/><label for="5">5</label><input name="L1Prof" type="radio" id="6" name="L1Prof" value="6" required/><label for="6">6</label></p>
-      <p style="color: #ac0d30"><legend>What language would you consider as your <strong>SECOND LANGUAGE</strong>?</legend><input name="L2" type="text" required/></p><legend>At what age did you start learning this language?</legend><input name="L2AoA" type="text" required/></p><p><legend>How well can you speak this language?</legend><input name="L2Prof" type="radio" id="0" name="L2Prof" value="0" required/><label for="0">0</label><input name="L2Prof" type="radio" id="1" name="L2Prof" value="1" required/><label for="1">1</label><input name="L2Prof" type="radio" id="2" name="L2Prof" value="2" required/><label for="2">2</label><input name="L2Prof" type="radio" id="3" name="L2Prof" value="3" required/><label for="3">3</label><input name="L2Prof" type="radio" id="4" name="L2Prof" value="4" required/><label for="4">4</label><input name="L2Prof" type="radio" id="5" name="L2Prof" value="5" required/><label for="5">5</label><input name="L2Prof" type="radio" id="6" name="L2Prof" value="6" required/><label for="6">6</label></p>
-      <p style="color: #bfbcfc"><legend>What language would you consider as your <strong>THIRD LANGUAGE</strong>?</legend><input name="L3" type="text" required/></p><legend>At what age did you start learning this language?</legend><input name="L3AoA" type="text" required/></p><p><legend>How well can you speak this language?</legend><input name="L3Prof" type="radio" id="0" name="L3Prof" value="0" required/><label for="0">0</label><input name="L3Prof" type="radio" id="1" name="L3Prof" value="1" required/><label for="1">1</label><input name="L3Prof" type="radio" id="2" name="L3Prof" value="2" required/><label for="2">2</label><input name="L3Prof" type="radio" id="3" name="L3Prof" value="3" required/><label for="3">3</label><input name="L3Prof" type="radio" id="4" name="L3Prof" value="4" required/><label for="4">4</label><input name="L3Prof" type="radio" id="5" name="L3Prof" value="5" required/><label for="5">5</label><input name="L3Prof" type="radio" id="6" name="L3Prof" value="6" required/><label for="6">6</label></p>
-      <p style="color: #da9d37"><legend>What language would you consider as your <strong>FOURTH LANGUAGE</strong>?</legend><input name="L4" type="text" required/></p><legend>At what age did you start learning this language?</legend><input name="L4AoA" type="text" required/></p><p><legend>How well can you speak this language?</legend><input name="L4Prof" type="radio" id="0" name="L4Prof" value="0" required/><label for="0">0</label><input name="L4Prof" type="radio" id="1" name="L4Prof" value="1" required/><label for="1">1</label><input name="L4Prof" type="radio" id="2" name="L4Prof" value="2" required/><label for="2">2</label><input name="L4Prof" type="radio" id="3" name="L4Prof" value="3" required/><label for="3">3</label><input name="L4Prof" type="radio" id="4" name="L4Prof" value="4" required/><label for="4">4</label><input name="L4Prof" type="radio" id="5" name="L4Prof" value="5" required/><label for="5">5</label><input name="L4Prof" type="radio" id="6" name="L4Prof" value="6" required/><label for="6">6</label></p>
+      <p style="color: #eb9c9a"><legend>What language would you consider as your <strong>FIRST LANGUAGE</strong>? (The language in which you feel most comfortable).</legend><input name="L1" type="text" required/></p>
+      <legend>At what age did you start learning this language?</legend><input name="AoAL1" type="text" required/></p>
+      <p><legend>How well can you speak this language?</legend>
+      <input name="ProfL1" type="radio" id="ProfL1_0" value="0" required/><label for="ProfL1_0">0</label>
+      <input name="ProfL1" type="radio" id="ProfL1_1" value="1" required/><label for="ProfL1_1">1</label>
+      <input name="ProfL1" type="radio" id="ProfL1_2" value="2" required/><label for="ProfL1_2">2</label>
+      <input name="ProfL1" type="radio" id="ProfL1_3" value="3" required/><label for="ProfL1_3">3</label>
+      <input name="ProfL1" type="radio" id="ProfL1_4" value="4" required/><label for="ProfL1_4">4</label>
+      <input name="ProfL1" type="radio" id="ProfL1_5" value="5" required/><label for="ProfL1_5">5</label>
+      <input name="ProfL1" type="radio" id="ProfL1_6" value="6" required/><label for="ProfL1_6">6</label></p>
+      <p style="color: #ac0d30"><legend>What language would you consider as your <strong>SECOND LANGUAGE</strong>?</legend><input name="L2" type="text" required/></p>
+      <legend>At what age did you start learning this language?</legend><input name="AoAL2" type="text" required/></p><p><legend>How well can you speak this language?</legend>
+      <input name="ProfL2" type="radio" id="ProfL2_0" value="0" required/><label for="ProfL2_0">0</label>
+      <input name="ProfL2" type="radio" id="ProfL2_1" value="1" required/><label for="ProfL2_1">1</label>
+      <input name="ProfL2" type="radio" id="ProfL2_2" value="2" required/><label for="ProfL2_2">2</label>
+      <input name="ProfL2" type="radio" id="ProfL2_3" value="3" required/><label for="ProfL2_3">3</label>
+      <input name="ProfL2" type="radio" id="ProfL2_4" value="4" required/><label for="ProfL2_4">4</label>
+      <input name="ProfL2" type="radio" id="ProfL2_5" value="5" required/><label for="ProfL2_5">5</label>
+      <input name="ProfL2" type="radio" id="ProfL2_6" value="6" required/><label for="ProfL2_6">6</label></p>
+      <p style="color: #bfbcfc"><legend>What language would you consider as your <strong>THIRD LANGUAGE</strong>?</legend><input name="L3" type="text" required/></p>
+      <legend>At what age did you start learning this language?</legend><input name="AoAL3" type="text" required/></p>
+      <p><legend>How well can you speak this language?</legend>
+      <input name="ProfL3" type="radio" id="ProfL3_0" value="0" required/><label for="ProfL3_0">0</label>
+      <input name="ProfL3" type="radio" id="ProfL3_1" value="1" required/><label for="ProfL3_1">1</label>
+      <input name="ProfL3" type="radio" id="ProfL3_2" value="2" required/><label for="ProfL3_2">2</label>
+      <input name="ProfL3" type="radio" id="ProfL3_3" value="3" required/><label for="ProfL3_3">3</label>
+      <input name="ProfL3" type="radio" id="ProfL3_4" value="4" required/><label for="ProfL3_4">4</label>
+      <input name="ProfL3" type="radio" id="ProfL3_5" value="5" required/><label for="ProfL3_5">5</label>
+      <input name="ProfL3" type="radio" id="ProfL3_6" value="6" required/><label for="ProfL3_6">6</label></p>
+      <p style="color: #da9d37"><legend>What language would you consider as your <strong>FOURTH LANGUAGE</strong>?</legend><input name="L4" type="text" required/></p>
+      <legend>At what age did you start learning this language?</legend><input name="AoAL4" type="text" required/></p>
+      <p><legend>How well can you speak this language?</legend>
+      <input name="ProfL4" type="radio" id="ProfL4_0" value="0" required/><label for="ProfL4_0">0</label>
+      <input name="ProfL4" type="radio" id="ProfL4_1" value="1" required/><label for="ProfL4_1">1</label>
+      <input name="ProfL4" type="radio" id="ProfL4_2" value="2" required/><label for="ProfL4_2">2</label>
+      <input name="ProfL4" type="radio" id="ProfL4_3" value="3" required/><label for="ProfL4_3">3</label>
+      <input name="ProfL4" type="radio" id="ProfL4_4" value="4" required/><label for="ProfL4_4">4</label>
+      <input name="ProfL4" type="radio" id="ProfL4_5" value="5" required/><label for="ProfL4_5">5</label>
+      <input name="ProfL4" type="radio" id="ProfL4_6" value="6" required/><label for="ProfL4_6">6</label></p>
       <p><legend>Do you speak any other languages?</legend><input name="otherLs" type="text" required/></p>`,
       data: {name: 'bio_info'}
     };

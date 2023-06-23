@@ -4,6 +4,7 @@ Notes: BACS similarity experiment
 	- welcome message works online?
 	- consent form suitable for online?
 	- is it worth including all BACS1 characters to widen the scope of the study? (already giving participants more characters than are actually used in the study)
+	- exclude participants who don't respond 1 to identical characters
 
 Chetail et al.
 	- 1152 trials per participant
