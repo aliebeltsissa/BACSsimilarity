@@ -33,10 +33,7 @@
     /* ========== INITIALISATION ========== */
     var jsPsych = initJsPsych({
       show_progress_bar: true,
-      on_finish: function() {
-        jsPsych.data.displayData(); // when all trials finished, display data -- can probably remove this for actually running
-        window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
-      }
+      on_finish: window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
     });
 
     // capture info from Prolific
@@ -121,12 +118,12 @@
     var consent = {
       type: jsPsychSurveyHtmlForm,
       preamble: '<p style="text-align:left;">Please click the below options to give your consent to participate in the study. I further declare:</p>',
-      html: `<p style="text-align:left;"><input name="consent1" type="radio" id="YES1" value="YES1" required/><label for="YES1">to have carefully read the explanations relating to this study and to the entirety of the experimental procedure;</label></p>
-      <p style="text-align:left;"><input name="consent2" type="radio" id="YES2" value="YES2" required/><label for="YES2">to have been made aware of the goals and objectives of the study in question;</label></p>
+      html: `<p style="text-align:left;"><input name="consent1" type="radio" id="YES1" value="YES" required/><label for="YES1">to have carefully read the explanations relating to this study and to the entirety of the experimental procedure;</label></p>
+      <p style="text-align:left;"><input name="consent2" type="radio" id="YES2" value="YES" required/><label for="YES2">to have been made aware of the goals and objectives of the study in question;</label></p>
       <p style="text-align:left;"><input name="consent3" type="radio" id="YES3" value="YES3" required/><label for="YES3">to have had the possibility to ask questions regarding any aspect of the experimental procedure and to have received satisfactory answers;</label></p>
-      <p style="text-align:left;"><input name="consent4" type="radio" id="YES4" value="YES4" required/><label for="YES4">to be aware of any discomfort possibly caused by the experiment;</label></p>
-      <p style="text-align:left;"><input name="consent5" type="radio" id="YES5" value="YES5" required/><label for="YES5">to have received sufficient assurances on the confidentiality of information obtained from the following tests;</label></p>
-      <p style="text-align:left;"><input name="consent6" type="radio" id="YES6" value="YES6" required/><label for="YES6">to be aware that it's possible to stop participating at any phase of the study.</label></p>`
+      <p style="text-align:left;"><input name="consent4" type="radio" id="YES4" value="YES" required/><label for="YES4">to be aware of any discomfort possibly caused by the experiment;</label></p>
+      <p style="text-align:left;"><input name="consent5" type="radio" id="YES5" value="YES" required/><label for="YES5">to have received sufficient assurances on the confidentiality of information obtained from the following tests;</label></p>
+      <p style="text-align:left;"><input name="consent6" type="radio" id="YES6" value="YES" required/><label for="YES6">to be aware that it's possible to stop participating at any phase of the study.</label></p>`
     };
     timeline.push(consent);
 
@@ -135,7 +132,7 @@
       type: jsPsychHtmlKeyboardResponse,
       stimulus: `<p>Welcome, and thank you for your time!</p>
       <p>In this experiment, you'll be asked to judge how similar two letters are to each other. You'll be asked to answer on a scale from 0 to 1 how similar they are, with <strong>0</strong> being <strong>very dissimilar</strong> and <strong>1</strong> being <strong>very similar</strong>. Please try to use the entire scale provided, not just the extremes.</p>
-      <p>Please press the spacebar to see an example.</p>`,
+      <p>Please press the spacebar to see the characters.</p>`,
       choices: ' '
     };
     timeline.push(instructions);
@@ -153,7 +150,7 @@
     var example = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: `<p>Here is an example of the screen you'll see to make your choice:</p><img src='example.png' height='400px'>
-      <p>When you're ready to start, please press the spacebar.</p></div>`,
+      <p>Note that you can click on the scale instead of dragging the slider. When you're ready to start, please press the spacebar.</p></div>`,
       choices: ' '
     };
     timeline.push(example);
