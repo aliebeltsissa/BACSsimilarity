@@ -31,13 +31,10 @@
   <script>
     /* ========== INITIALISATION ========== */
     var jsPsych = initJsPsych({
-      show_progress_bar: true,
       on_finish: function() {
         jsPsych.data.displayData(); // when all trials finished, display data -- can probably remove this for actually running
-      };
-      function() {
-        window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX"
-      } // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
+        window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
+      }
     });
 
     // capture info from Prolific
@@ -51,6 +48,8 @@
       session_id: session_id
     });
     
+    var timeline = [];
+    
     /* open connection with Pavlovia */
     var pavlovia_init = {
       type: jsPsychPavlovia,
@@ -58,7 +57,6 @@
     };
     timeline.push(pavlovia_init);
     
-    var timeline = [];
 
     /* ========== STIMULI GENERATION ========== */
 
