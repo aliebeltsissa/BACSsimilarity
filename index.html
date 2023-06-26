@@ -33,7 +33,9 @@
     /* ========== INITIALISATION ========== */
     var jsPsych = initJsPsych({
       show_progress_bar: true,
-      on_finish: window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
+      on_finish: function() {
+        window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX" // redirect Prolific participants to completed submission page -- CHANGE THIS LINK
+      }
     });
 
     // capture info from Prolific
