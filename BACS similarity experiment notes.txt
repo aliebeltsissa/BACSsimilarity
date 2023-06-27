@@ -5,6 +5,15 @@ Notes: BACS similarity experiment
 	- consent form suitable for online?
 	- is it worth including all BACS1 characters to widen the scope of the study? (already giving participants more characters than are actually used in the study)
 	- exclude participants who don't respond 1 to identical characters
+Fatigue
+	- currently 50min long
+	- worth splitting into 4 parts instead of 2?
+		wouldn't cost us any extra money
+		but we said in 2 parts in the ethics application
+		but 4 parts would make it even easier on participants
+	- maybe make it more engaging?
+		add different colours for the characters/instructions for each block?
+		add in instruction that it's long and monotonous, but to please keep paying attention?
 
 Chetail et al.
 	- 1152 trials per participant
