@@ -6,6 +6,7 @@ Notes: BACS similarity experiment
 	- is it worth including all BACS1 characters to widen the scope of the study? (already giving participants more characters than are actually used in the study)
 	- exclude participants who don't respond 1 to identical characters
 	- could actually stay with 1 repo instead of BASCS1SE part 1 & 2: run part 1, un-comment code for part 2, run that
+	- colours that would work for different blocks: #eb9c9a, #ac0d30, #bfbcfc, #911857, #e37a12, #c1d4eb, #285f98, #da9d37, #5358a3, #7ead8a
 
 Fatigue
 	- currently 50min long
